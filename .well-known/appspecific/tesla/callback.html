@@ -1,0 +1,12 @@
+<!doctype html>
+<html><head><meta name="viewport" content="width=device-width">
+<title>Tesla login code</title></head>
+<body style="font-family:sans-serif;padding:20px">
+<h3>Tesla login code</h3>
+<textarea id="c" rows="4" style="width:100%" readonly></textarea>
+<button onclick="navigator.clipboard.writeText(c.value)">Copy</button>
+<script>
+const p=new URLSearchParams(location.search);
+c.value=p.get('code')||('Error: '+(p.get('error')||'no code'));
+</script>
+</body></html>
